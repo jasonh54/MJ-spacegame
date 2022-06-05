@@ -1,5 +1,6 @@
 PImage player;
 PImage enemy;
+Enemy e;
 void setup(){
   size(800,800);
   player = loadImage("images/playerShip.png");
@@ -7,5 +8,6 @@ void setup(){
 }
 
 void draw(){
-
+  e.show();
+  e.move();
 }
