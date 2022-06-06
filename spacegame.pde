@@ -4,8 +4,11 @@ PImage missile;
 Enemy e;
 Player p;
 Missile m;
+
 boolean wKey, aKey, sKey, dKey, space;
 ArrayList<Missile> missiles; 
+ArrayList<GameObject> spawn=new ArrayList<GameObject>();
+
 
 void setup(){
   size(800,800);
@@ -27,9 +30,16 @@ void draw(){
   p.shoot();
   m.move();
   m.show();
+
   for(int i=0;i<missiles.size();i++){
     missiles.get(i).move();
     missiles.get(i).show();
+  }
+  spawn.add(new Enemy());
+  for(int k=0;k<spawn.size();k++){
+    spawn.get(k).show();
+    spawn.get(k).move();
+
   }
 }
 
