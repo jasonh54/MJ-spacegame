@@ -1,13 +1,31 @@
 class Player extends GameObject{
+  float xv,yv;
   public Player(){
     super(player,400,800,50,50);
+    xv = 0;
+    yv = 0;
   }
   public void move(){
-    y=y-5;
-  //1)use the overloaded function of the game object
-  //2)write a move function for the class you're working on
-  //3) make an object and tell it to show and move in the draw function
-
+    if(wKey == true){
+      yv=-5;
+    }
+    else if(sKey == true){
+      yv=5;
+    }
+    else{
+      yv=0;
+    }
+    if(dKey == true){
+      xv=5;
+    }
+    else if(aKey == true){
+      xv=-5;
+    }
+    else{
+      xv=0;
+    }
+    x+=xv;
+    y+=yv;
   }
 }
 //git add .
