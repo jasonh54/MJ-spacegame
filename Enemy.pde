@@ -1,6 +1,6 @@
 class Enemy extends GameObject{
   public Enemy(){
-    super();
+    super(enemy, 400,0,50,50);
   }
   public void move(){
     x=x+10;
