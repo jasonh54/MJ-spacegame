@@ -29,7 +29,7 @@ class Player extends GameObject{
   }
   public void shoot(){
     if(space == true){
-      missiles.add(new Missile(this.x,this.ygit));
+      missiles.add(new Missile(this.x,this.y));
     }
   }
 }
