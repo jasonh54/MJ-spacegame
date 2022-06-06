@@ -21,15 +21,9 @@ void draw(){
   p.move();
 
 
-  resetKeys();
+
 }
 
-void resetKeys(){
-  wKey = false;
-  aKey = false;
-  sKey = false;
-  dKey = false;
-}
 
 void keyPressed(){
   if(keyCode == 87){
@@ -44,4 +38,31 @@ void keyPressed(){
   if(keyCode == 83){
     sKey = true;
   }
+}
+void keyReleased(){
+  if(keyCode == 87){
+    wKey = false;
+  }
+  if(keyCode == 65){
+    aKey = false;
+  }
+  if(keyCode == 68){
+    dKey = false;
+  }
+  if(keyCode == 83){
+    sKey = false;
+  }
+}
+
+float distance(GameObject obj1, GameObject obj2){
+  float a = obj1.x - obj2.x;
+  float b = obj1.y - obj2.y;
+  return( sqrt(a*a + b*b));
+}
+
+boolean collisionCheck(GameObject obj1, GameObject obj2){
+  if(distance(obj1,obj2) < (obj1.w/2 + obj2.w/2)){
+    return true;
+  }
+  return false;
 }
