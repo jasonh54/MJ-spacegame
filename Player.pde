@@ -27,6 +27,11 @@ class Player extends GameObject{
     x+=xv;
     y+=yv;
   }
+  public void shoot(){
+    if(space == true){
+      missiles.add(new Missile(this.x,this.ygit));
+    }
+  }
 }
 //git add .
 //git commit -m "message"

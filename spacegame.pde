@@ -4,8 +4,10 @@ PImage missile;
 Enemy e;
 Player p;
 Missile m;
+
+boolean wKey, aKey, sKey, dKey, space;
+ArrayList<Missile> missiles; 
 ArrayList<GameObject> spawn=new ArrayList<GameObject>();
-boolean wKey, aKey, sKey, dKey;
 
 
 void setup(){
@@ -16,6 +18,7 @@ void setup(){
   p = new Player();
   e = new Enemy();
   m = new Missile(340,800);
+  missiles = new ArrayList<Missile>();
 }
 
 void draw(){
@@ -24,12 +27,19 @@ void draw(){
   e.move();
   p.show();
   p.move();
+  p.shoot();
   m.move();
   m.show();
+
+  for(int i=0;i<missiles.size();i++){
+    missiles.get(i).move();
+    missiles.get(i).show();
+  }
   spawn.add(new Enemy());
   for(int k=0;k<spawn.size();k++){
     spawn.get(k).show();
     spawn.get(k).move();
+
   }
 }
 
@@ -47,6 +57,9 @@ void keyPressed(){
   if(keyCode == 83){
     sKey = true;
   }
+  if(keyCode == 32){
+    space = true;
+  }
 }
 void keyReleased(){
   if(keyCode == 87){
@@ -60,6 +73,9 @@ void keyReleased(){
   }
   if(keyCode == 83){
     sKey = false;
+  }
+  if(keyCode == 32){
+    space = false;
   }
 }
 
