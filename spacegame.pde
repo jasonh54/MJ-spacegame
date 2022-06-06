@@ -25,7 +25,6 @@ void draw(){
   p.move();
   m.move();
   m.show();
-  resetKeys();
 
 }
 
