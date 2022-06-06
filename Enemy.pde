@@ -1,9 +1,9 @@
 class Enemy extends GameObject{
   public Enemy(){
-    super(enemy, 400,0,50,50);
+    super(enemy, random(800),0,50,50);
   }
   public void move(){
-    x=x+10;
+    //x=x+10;
     y=y+10;
   }
 }
