@@ -4,8 +4,8 @@ PImage missile;
 Enemy e;
 Player p;
 Missile m;
-boolean wKey, aKey, sKey, dKey;
-
+boolean wKey, aKey, sKey, dKey, space;
+ArrayList<Missile> missiles; 
 
 void setup(){
   size(800,800);
@@ -15,6 +15,7 @@ void setup(){
   p = new Player();
   e = new Enemy();
   m = new Missile(340,800);
+  missiles = new ArrayList<Missile>();
 }
 
 void draw(){
@@ -23,9 +24,13 @@ void draw(){
   e.move();
   p.show();
   p.move();
+  p.shoot();
   m.move();
   m.show();
-
+  for(int i=0;i<missiles.size();i++){
+    missiles.get(i).move();
+    missiles.get(i).show();
+  }
 }
 
 
@@ -42,6 +47,9 @@ void keyPressed(){
   if(keyCode == 83){
     sKey = true;
   }
+  if(keyCode == 32){
+    space = true;
+  }
 }
 void keyReleased(){
   if(keyCode == 87){
@@ -55,6 +63,9 @@ void keyReleased(){
   }
   if(keyCode == 83){
     sKey = false;
+  }
+  if(keyCode == 32){
+    space = false;
   }
 }
 
