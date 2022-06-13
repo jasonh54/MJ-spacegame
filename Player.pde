@@ -33,6 +33,11 @@ class Player extends GameObject{
       missiles.add(new Missile(this.x,this.y));
     }
   }
+  public void gethit(){
+    if(collisionCheck(this,e)==true){
+      noLoop();
+    }
+  }
 }
 //git add .
 //git commit -m "message"
