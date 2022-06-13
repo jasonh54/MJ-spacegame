@@ -1,5 +1,6 @@
 class Player extends GameObject{
   float xv,yv;
+  Timer time = new Timer(500);
   public Player(){
     super(player,400,800,50,50);
     xv = 0;
@@ -28,7 +29,7 @@ class Player extends GameObject{
     y+=yv;
   }
   public void shoot(){
-    if(space == true){
+    if(space == true && time.countDown() == true){
       missiles.add(new Missile(this.x,this.y));
     }
   }
