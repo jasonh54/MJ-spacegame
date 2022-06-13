@@ -1,6 +1,7 @@
 PImage player;
 PImage enemy;
 PImage missile;
+PImage alienMissile, asteroid, enemy2, heart, shield, spaceBackground;
 Enemy e;
 Player p;
 Missile m;
@@ -16,6 +17,11 @@ void setup(){
   player = loadImage("images/playerShip.png");
   enemy = loadImage("images/enemyShip.png");
   missile = loadImage("images/missileimage.png");
+  alienMissile = loadImage("images/alienMissileimage.png");
+  enemy2 = loadImage("images/enemyShip2.png");
+  heart = loadImage("images/heart.png");
+  shield = loadImage("images/shield.png");
+  spaceBackground = loadImage("images/spacebackground.jpg");
   p = new Player();
   e = new Enemy();
   m = new Missile(340,800);
