@@ -34,6 +34,10 @@ void setup(){
 
 void draw(){
   background(0);
+  b.show();
+  b.move();
+  b2.show();
+  b2.move();
   e.show();
   e.move();
   p.show();
@@ -42,10 +46,7 @@ void draw(){
   m.move();
   m.show();
   s.spawnEnemy();
-  b.show();
-  b.move();
-  b2.show();
-  b2.move();
+  
 
   for(int i=0;i<missiles.size();i++){
     missiles.get(i).move();
