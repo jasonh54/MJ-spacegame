@@ -6,7 +6,7 @@ Enemy e;
 Player p;
 Missile m;
 Spawner s;
-
+Background b;
 boolean wKey, aKey, sKey, dKey, space;
 ArrayList<Missile> missiles; 
 ArrayList<GameObject> spawn=new ArrayList<GameObject>();
@@ -26,6 +26,7 @@ void setup(){
   e = new Enemy();
   m = new Missile(340,800);
   s = new Spawner();
+  b = new Background();
   missiles = new ArrayList<Missile>();
 }
 
@@ -39,6 +40,8 @@ void draw(){
   m.move();
   m.show();
   s.spawnEnemy();
+  b.show();
+  b.move();
 
   for(int i=0;i<missiles.size();i++){
     missiles.get(i).move();
