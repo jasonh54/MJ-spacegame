@@ -3,8 +3,25 @@ class Enemy extends GameObject{
     super(enemy, random(800),0,50,50);
   }
   public void move(){
-    //x=x+10;
     y=y+10;
+  }
+}
+
+class Enemy2 extends GameObject{
+  public Enemy2(){
+    super(enemy2, random(800),0,75,75);
+  }
+  public void move(){
+    y=y+7;
+  }
+}
+
+class Asteroid extends GameObject{
+  public Asteroid(){
+    super(asteroid, random(800),0,100,100);
+  }
+  public void move(){
+    y=y+5;
   }
 }
 ////git add .
