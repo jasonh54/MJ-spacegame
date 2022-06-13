@@ -17,10 +17,11 @@ void setup(){
   player = loadImage("images/playerShip.png");
   enemy = loadImage("images/enemyShip.png");
   missile = loadImage("images/missileimage.png");
-  alienMissile = loadImage("images/alienMissileimage.png");
+  alienMissile = loadImage("images/alienMissile.png");
   enemy2 = loadImage("images/enemyShip2.png");
   heart = loadImage("images/heart.png");
   shield = loadImage("images/shield.png");
+  asteroid = loadImage("images/asteroid.png");
   spaceBackground = loadImage("images/spacebackground.jpg");
   p = new Player();
   e = new Enemy();
