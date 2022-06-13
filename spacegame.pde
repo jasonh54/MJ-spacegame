@@ -46,6 +46,7 @@ void draw(){
   m.move();
   m.show();
   s.spawnEnemy();
+  p.gethit();
   
 
   for(int i=0;i<missiles.size();i++){

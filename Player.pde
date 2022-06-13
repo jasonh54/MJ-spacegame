@@ -34,8 +34,10 @@ class Player extends GameObject{
     }
   }
   public void gethit(){
-    if(collisionCheck(this,e)==true){
-      noLoop();
+    for(int i=0;i<spawn.size();i++){
+      if(collisionCheck(this,spawn.get(i))==true){
+        noLoop();
+      }
     }
   }
 }

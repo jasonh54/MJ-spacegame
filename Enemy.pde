@@ -30,3 +30,6 @@ class Asteroid extends GameObject{
 //1)use the overloaded function of the game object
 //2)write a move function for the class you're working on
 //3) make an object and tell it to show and move in the draw function
+//In the Enemy classes, in the move function
+//program it so that the Enemy is no longer alive once then leave off screen
+//do the same for the missile
